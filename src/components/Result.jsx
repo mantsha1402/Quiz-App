@@ -6,7 +6,7 @@ import axios from "axios";
 
 
     useEffect(() => {
-        axios.get('/api/result/userId')
+        axios.get('https://ethereal-tame-gong.glitch.me/result/userId')
         .then(response => setResult(response.data))
         .catch(console.error(error));
     }, []);

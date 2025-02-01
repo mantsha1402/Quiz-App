@@ -6,10 +6,11 @@ function Home() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         // Mock Login Logic
-        if (username === 'user' && password === 'password'){
-            navigate('/quiz');
+        if (username === 'admin' && password === 'password'){
+            localStorage.setItem("user", JSON.stringify({username}))
+            navigate('https://ethereal-tame-gong.glitch.me/quiz');
         }
         else{
             alert("Invalid Login Credentials");

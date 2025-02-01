@@ -10,7 +10,7 @@ function Quiz() {
     const navigate = useNavigate();
 
     useEffect(() =>{
-        axios.get('/api/questions')
+        axios.get('https://ethereal-tame-gong.glitch.me/questions')
         .then(response => setQuestions (response.data))
         .catch(error => console.error(error));
     }, []);
